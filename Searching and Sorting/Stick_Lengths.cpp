@@ -116,7 +116,7 @@ void __f(const char* names, Arg1&& arg1, Args&&... args) {
 //##############################//
 
 
-// Logic : If we make all the sticks to the size of the madian stick then the cost will be minimum
+// Logic : If we make all the sticks to the size of the median stick then the cost will be minimum
 void solver() {
 	int n;
 	cin >> n;
