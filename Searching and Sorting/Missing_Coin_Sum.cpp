@@ -115,7 +115,11 @@ void __f(const char* names, Arg1&& arg1, Args&&... args) {
 //####   Author@Hanzalah    ####//
 //##############################//
 
-/* Let’s say we have some coins whose total value is X, so the maximum value of the next coin can be X + 1. If the next coin has a value greater than X + 1 then (X + 1) is the smallest sum which we cannot create using any subset of coins. Otherwise, if the value of the next coin is less than (X + 1) we can add it to the total value to get the new total sum X.*/
+/* Let’s say we have some coins whose total value is X, so the maximum value of the next coin can be X + 1. 
+If the next coin has a value greater than + 1 then (X + 1) is the smallest sum which we cannot create using 
+any subset of coins. Otherwise, if the value of the next coin is less than (X + 1) we can add it to the total
+value to get the new total sum X.*/
+
 void solver() {
     int n;
     cin >> n;
