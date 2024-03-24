@@ -115,6 +115,7 @@ void __f(const char* names, Arg1&& arg1, Args&&... args) {
 //####   Author@Hanzalah    ####//
 //##############################//
 
+// Another Aprroach @ https://www.geeksforgeeks.org/cses-solutions-josephus-problem-i/
 void solver() {
     int n, currChild = 1, deleteChild = 2;
     cin >> n;
