@@ -115,19 +115,23 @@ void __f(const char* names, Arg1&& arg1, Args&&... args) {
 //####   Author@Hanzalah    ####//
 //##############################//
 
+/*Our approach will be to construct array positions, which will store the index of all elements in the array ARR. 
+The idea is to observe the fact that whenever the number val occurs before val+1, we can always take both of them 
+in a single round, but if val comes after val+1, we cannot take them in the single round, and we will need to make 
+an extra round to collect val+1. We will use this idea to find the total number of rounds to collect all numbers.*/
+
 void solver() {
     int n;
     cin >> n;
-    vector<pii> nums(n);   
-
-    for(int i = 0; i < n; i++){
-        cin >> nums[i].first;
-        nums[i].second = i;
+    vector<int> nums(n+1), idxs(n+1);
+    for(int i = 1; i <= n; i++){
+        cin >> nums[i];
+        idxs[nums[i]] = i;
     }
-    sort(all(nums));
+
     int round = 1;
-    for(int i = 1; i < n; i++){
-        if(nums[i - 1].second > nums[i].second)     round++;
+    for(int i = 2; i <= n; i++){
+        if(idxs[i] < idxs[i-1])     round++;
     }
     cout << round;
 }
