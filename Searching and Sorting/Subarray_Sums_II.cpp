@@ -139,7 +139,6 @@ void solver() {
         mp[sum]++;
     }
     cout << count;
-
 }
 
 
